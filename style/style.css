@@ -63,6 +63,9 @@ nav {
 .logo {
   width: 150px;
 }
+.search-container {
+  position: relative;
+}
 .search-input {
   width: 250px;
   height: 30px;
@@ -72,6 +75,16 @@ nav {
   color: var(--blue);
   border-bottom: 1px solid var(--orange);
   background: transparent;
+  
+}
+#error-msg-for-input {
+  display: none;
+}
+.error-msg-input {
+  color: var(--error-red);
+  position: absolute;
+  top: 30px;
+  right: 118px;
 }
 
 .search-input:focus {
