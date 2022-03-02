@@ -1,0 +1,57 @@
+@media (max-width: 769px) {
+  .search-result {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (max-width: 550px) {
+  nav {
+    width: 100vw;
+  }
+  .nav-item-container {
+    width: inherit;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    width: 100px;
+  }
+
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .search-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .btn-search {
+    border-radius: .5rem
+  }
+  .phone-details-sec {
+    width: 90%;
+  }
+  .phone-details-card {
+    margin: 1rem;
+    width: 100%;
+    max-width: 100vw;
+  }
+  .phone-info {
+    grid-template-columns: repeat(1, auto);
+    justify-items: center;
+  }
+  .phone-image-container {
+    width: 250px;
+    max-width: 100vw;
+  }
+  .search-result-sec {
+    max-width: 100vw;
+    padding: 2rem 0rem;
+  }
+  .search-result {
+    grid-template-columns: repeat(1, auto);
+  }
+}
