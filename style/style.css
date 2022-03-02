@@ -316,6 +316,9 @@ main {
 
 
 /* loading spinier */
+#spinner {
+  display: none;
+}
 .loading-spnner {
   height: 100%;
   display: flex;

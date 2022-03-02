@@ -3,18 +3,34 @@
 const searchInput = document.getElementById("search");
 const searchBtn = document.getElementById("search-btn");
 
-searchBtn.addEventListener("click", () => {
-  const searchText = searchInput.value.toLowerCase();
+// spinner
+const spinner = document.getElementById('spinner');
+const spinnerToggle =  value=> {
+  if (value === true) {
+    spinner.style.display = 'flex';
+  }
+  else {
+    spinner.style.display = 'none';
+  }
+}
+spinnerToggle(true);
+window.addEventListener('DOMContentLoaded', () => {
+  spinnerToggle(false);
+});
 
+searchBtn.addEventListener("click", () => {
+  spinnerToggle(true);
+  const searchText = searchInput.value.toLowerCase();
   const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
 
   if (searchInput.value === '' || searchInput.value.length <= 0) {
-    console.log("please give valid input");
-
-  } else {
+    spinnerToggle(false);
+  } 
+  else {
     fetch(url)
       .then((Response) => Response.json())
       .then((data) => searchResult(data));
+      
   }
 });
 
@@ -26,17 +42,7 @@ showAll.style.display = "none";
 const resultDisplaySec = document.getElementById('search-result-sec-id');
 resultDisplaySec.style.display = 'none';
 
-// spinner
-const spinner = document.getElementById('spinner');
-const spinnerToggle =  value=> {
-  if (value === true) {
-    spinner.style.display = 'flex';
-  }
-  else {
-    spinner.style.display = 'none';
-  }
-}
-spinnerToggle(false);
+
 
 
 const searchResult = (data) => {
@@ -52,6 +58,7 @@ const searchResult = (data) => {
   if (data.status === false) {
     errorMsg.style.display = 'block'
     showAll.style.display = "none";
+    spinnerToggle(false);
   }
   else {
     errorMsg.style.display = 'none';
@@ -85,9 +92,11 @@ const searchResult = (data) => {
         showAll.addEventListener("click", () => {
           resultDisplay.appendChild(div);
           showAll.style.display = "none";
+          spinnerToggle(false);
         });
       } else {
         resultDisplay.appendChild(div);
+        spinnerToggle(false);
       }
     });
   };
