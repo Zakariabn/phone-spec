@@ -1,0 +1,338 @@
+:root {
+  /* color pallet */
+  --blue: #1a71f3;
+  --orange: #f3711a;
+  --gray: #808080;
+  --error-red: #ff2400;
+
+  --white: #ebebeb;
+  --main-bg: #e1e1e1;
+
+  --spinnerWidth: 35px;
+
+  /* font family */
+  --title-font: "Roboto", sans-serif;
+  --text-font: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* global style */
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--text-font);
+  background-color: var(--white);
+}
+i {
+  font-size: 14px;
+}
+/*  */
+
+/* header section style */
+header {
+  position: relative;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-bg);
+  box-shadow: 0px 1px 5px gray;
+  position: sticky;
+  top: 1px;
+}
+
+.nav-item-container {
+  width: inherit;
+  max-width: 1200px;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+}
+.search-input {
+  width: 250px;
+  height: 30px;
+  padding: 0 0.5rem;
+  border: none;
+  font-family: var(--title-font);
+  color: var(--blue);
+  border-bottom: 1px solid var(--orange);
+  background: transparent;
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: transparent;
+}
+.search-input::placeholder {
+  color: #1a71f3;
+}
+.btn-search {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem 2rem 0 1rem;
+  font-family: var(--title-font);
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--blue);
+  box-shadow: 2px 3px 2px rgb(85, 82, 82);
+}
+.btn-search:hover {
+  cursor: pointer;
+  color: rgb(216, 216, 216);
+}
+.btn-search:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+/* header section style end hear */
+
+/* phone details section style */
+.phone-details-card {
+  margin: 1rem;
+  background-color: var(--main-bg);
+  position: relative;
+
+}
+
+.cross-btn {
+  position: absolute;
+  top: -13px;
+  right: -8px;
+  z-index: 99;
+}
+.cross-btn:hover {
+  color: var(--error-red);
+  cursor: pointer;
+}
+.cross-btn:active {
+  transform: scale(.8);
+}
+.cross-btn i{
+  font-size: 2rem;
+}
+
+header  {
+  background-color: #fff;
+}
+header h1 {
+  margin-left: 1rem;
+  padding: .5rem 0;
+  color: var(--orange);
+}
+.phone-info {
+  display: grid;
+  grid-template-columns: 250px 600px;
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  padding: 1rem;
+}
+.phone-image-container {
+  width: 250px;
+  height: 300px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-image {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.other-feather {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.release-date {
+  font-family: var(--title-font);
+  margin-bottom: 1rem;
+}
+.info-1 i {
+  margin-right: .5rem;
+  color: var(--blue);
+}
+.info-2 i{
+  color: var(--error-red);
+}
+
+.main-feather {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.main-feather i {
+  color: var(--error-red);
+}
+/* phone details section style end hear */
+
+/* main style */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* search result section style */
+.search-result-sec {
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  width: inherit;
+  max-width: 1200px;
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.error {
+  text-align: center;
+  display: block;
+  color: var(--error-red);
+  font-weight: bold;
+}
+.search-result {
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 3rem;
+  justify-content: center;
+}
+
+/* show all btn style */
+#btn-show-all {
+  display: none;
+}
+.show-all-btn {
+  border: none;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem 0.3rem 1rem 0rem;
+  font-family: var(--title-font);
+  color: var(--blue);
+  background-color: var(--white);
+  box-shadow: 2px 3px 2px rgb(85, 82, 82);
+}
+.show-all-btn:hover {
+  cursor: pointer;
+  color: #104fad;
+}
+.show-all-btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+/* search result section style end hear */
+
+/* recommendation section style */
+.recommended-sec {
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  width: inherit;
+  max-width: 1200px;
+  background-color: var(--white);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.sec-title {
+  margin-bottom: 2rem;
+}
+.recommended {
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+/* card style */
+.card {
+  /* overflow: hidden; */
+  width: 300px;
+  height: auto;
+  margin: 0 1rem;
+  background-color: var(--white);
+}
+.card-visual {
+  display: flex;
+  justify-content: center;
+}
+.card-image {
+  width: 200px;
+  height: 260px;
+  margin: 1rem 0rem;
+}
+.card-content {
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.title-text-container {
+  margin-bottom: 0.5rem;
+}
+
+/* card btn style  */
+.card-btn {
+  border: none;
+  margin-top: 1rem;
+  padding: 0.35rem 1rem;
+  border-radius: 3rem;
+  color: white;
+  font-family: var(--title-font);
+  font-weight: bold;
+  align-self: center;
+  background-color: var(--orange);
+  box-shadow: 0px 2px 2px gray;
+}
+.card-btn:hover {
+  cursor: pointer;
+  color: rgb(238, 238, 238);
+}
+.card-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+/* loading spinier */
+.loading-spnner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-spnner::after {
+  content: "";
+  width: var(--spinnerWidth);
+  height: var(--spinnerWidth);
+  border: 3px solid transparent;
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: loading 1s ease-out infinite;
+}
+@keyframes loading{
+  to{
+    transform: rotate(1turn);
+  }
+}

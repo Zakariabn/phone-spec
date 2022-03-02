@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="./asset/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Phone Spec | Find your dream phone</title>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome link-->
+    <script
+      src="https://kit.fontawesome.com/73f6420c5b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+
+    
+
+    <header>
+      <nav>
+        <div class="nav-item-container">
+          <img
+            src="./asset/icons/logo.png"
+            alt="phone spec logo"
+            class="logo"
+          />
+          <div class="search-container">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search Phone"
+              id="search"
+              class="search-input"
+            />
+            <small class="error-msg-input" id="error-msg-for-input"></small>
+            <button class="btn-search" id="search-btn">Search</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- spinner -->
+    <div class="loading-spnner" id="spinner">
+    </div>
+
+    <main>
+     
+      <!-- phone details section -->
+      <section class="phone-details-sec" id="phone-details-display">
+       
+
+      </section>
+
+      <!-- search result section -->
+      <section class="search-result-sec" id="search-result-sec-id">
+        
+        <!-- error msg -->
+        <div class="error" id="error-msg">
+          <p>Result not found</p>
+        </div>
+
+        <!-- search result -->
+        <div class="search-result" id="result-display"></div>
+        <button class="show-all-btn" id="btn-show-all">Show all <i class="fa-solid fa-arrow-down-long"></i></button>
+      </section>
+
+      <!-- recommended section -->
+      <section class="recommended-sec">
+        <h2 class="sec-title">Recommended for you</h2>
+
+        <div class="recommended" id="recommended-display">
+          <button class="card-btn">Details</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3 class="footer-title"></h3>
+    </footer>
+
+    <script src="./app/js/index.js"></script>
+  </body>
+</html>
